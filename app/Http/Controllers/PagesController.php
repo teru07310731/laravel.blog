@@ -9,6 +9,10 @@ class PagesController extends Controller
     //
      public function about() 
      {
-        return view('about');
+        $data = [];
+        $data["first_name"] = "Luke";
+        $data["last_name"] = "Skywalker";
+       
+        return view('pages.about', $data);        
     }
 }
